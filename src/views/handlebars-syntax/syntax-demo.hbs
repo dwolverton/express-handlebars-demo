@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Handlebars Syntax Demo</title>
+</head>
+<body>
+  <h1>Handlebars Syntax Demo</h1>
+  
+  <h2>Object (. syntax)</h2>
+  <p>
+    {{jellyBean.color}} jelly beans are {{jellyBean.flavor}} flavored.
+  </p>
+
+  <h2>Array</h2>
+  <ol>
+    {{#each days}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ol>
+
+  <h2>Array of Objects</h2>
+  <ul>
+    {{#each jellyBeans}}
+      <li>{{color}} jelly beans are {{flavor}} flavored.</li>
+    {{/each}}
+  </ul>
+
+  <h2>Conditional If</h2>
+  <p>Will we see anything here? Change the query string from ?sweet=no to ?sweet=yes</p>
+  <p>
+    {{#if isSweet}}Yes. It is sweet!{{/if}}
+  </p>
+
+  <h2>Conditional If/Else</h2>
+  <p>
+    {{#if isSweet}}
+      Yes. It is sweet!
+    {{else}}
+      No. It is not sweet.
+    {{/if}}
+  </p>
+
+  <a href="/">Back Home</a>
+</body>
+</html>
