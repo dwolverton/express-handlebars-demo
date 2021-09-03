@@ -3,7 +3,7 @@ import express from 'express';
 //creates a new router object
 const routes = express.Router();
 
-routes.get('/demo', (req, res) => {
+routes.get('/handlebars/demo', (req, res) => {
   const sweet = req.query.sweet as string;
 
   const jellyBean = {
@@ -24,7 +24,7 @@ routes.get('/demo', (req, res) => {
   });
 });
 
-routes.get('/exercise', (req, res) => {
+routes.get('/handlebars/exercise', (req, res) => {
   const magical = req.query.magical as string;
 
   const address = {

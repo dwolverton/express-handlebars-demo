@@ -16,11 +16,11 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/", homeRoutes);
-app.use("/basics", basicsRoutes);
-app.use("/handlebars", handlebarsSyntaxRoutes);
-app.use("/madlib", madlibRoutes);
-app.use("/form-demo", formDemoRoutes);
-app.use("/exercise", exerciseRoutes);
+app.use("/", basicsRoutes);
+app.use("/", handlebarsSyntaxRoutes);
+app.use("/", madlibRoutes);
+app.use("/", formDemoRoutes);
+app.use("/", exerciseRoutes);
 
 const port = 3000;
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
